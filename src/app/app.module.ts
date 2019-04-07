@@ -1,3 +1,5 @@
+import { EditdataPage } from './../pages/editdata/editdata';
+import { AdddataPage } from './../pages/adddata/adddata';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -7,10 +9,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { SQLite } from '@ionic-native/sqlite/ngx';
+import { Toast } from '@ionic-native/toast/ngx';
+
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AdddataPage,
+    EditdataPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +27,16 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AdddataPage,
+    EditdataPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SQLite,
+    Toast
   ]
 })
 export class AppModule {}
