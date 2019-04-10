@@ -9,8 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { SQLite } from '@ionic-native/sqlite/ngx';
-import { Toast } from '@ionic-native/toast/ngx';
+import { SQLite } from '@ionic-native/sqlite';
+import { Toast } from '@ionic-native/toast';
 
 
 @NgModule({
